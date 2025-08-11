@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-accent-warm text-white font-semibold px-6 py-3 rounded-lg hover:bg-opacity-90 hover:scale-105 hover:shadow-lg transition-all duration-300 min-h-[44px] flex items-center justify-center;
+    box-shadow: 0 2px 8px rgba(229, 119, 23, 0.3);
+  }
+  
+  .btn-secondary {
+    @apply bg-accent-cool text-white font-semibold px-6 py-3 rounded-lg hover:bg-opacity-90 hover:scale-105 hover:shadow-lg transition-all duration-300 min-h-[44px] flex items-center justify-center;
+    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
+  }
+  
+  .btn-whatsapp {
+    @apply bg-green-500 text-white font-semibold px-6 py-3 rounded-lg hover:bg-green-600 hover:scale-105 hover:shadow-lg transition-all duration-300 min-h-[44px] flex items-center justify-center;
+    box-shadow: 0 2px 8px rgba(34, 197, 94, 0.3);
+  }
+  
+  .card-dish {
+    @apply bg-white rounded-xl shadow-md overflow-hidden cursor-pointer transition-all duration-300 border-2 border-transparent;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-dish:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    border-color: #2E8B57;
+  }
+  
+  .nav-button {
+    @apply px-4 py-2 font-semibold text-neutral hover:text-accent-warm hover:scale-105 transition-all duration-300 relative min-h-[44px] flex items-center justify-center rounded-lg;
+  }
+  
+  .nav-button:hover {
+    background: linear-gradient(45deg, rgba(229, 119, 23, 0.1), rgba(46, 139, 87, 0.1));
+  }
+  
+  .nav-button.active {
+    @apply text-accent-warm bg-gradient-to-r from-accent-warm/10 to-accent-green/10;
+  }
+  
+  .nav-button.active::after {
+    content: '';
+    @apply absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-accent-warm to-accent-green rounded-full;
+  }
+  
+  .container-custom {
+    @apply max-w-container mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
+
+@layer utilities {
+  .backdrop-blur-custom {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out;
+  }
+  
+  .animate-pulse-gentle {
+    animation: pulseGentle 2s ease-in-out infinite;
+  }
+  
+  .gradient-text {
+    background: linear-gradient(45deg, #E57717, #2E8B57, #FFD700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .card-highlight {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .card-highlight::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.3), transparent);
+    transition: left 0.5s ease;
+  }
+  
+  .card-highlight:hover::before {
+    left: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes pulseGentle {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
