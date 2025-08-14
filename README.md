@@ -1,16 +1,10 @@
-Título do Projeto:
+https://sabor-do-sertao.netlify.app/
 
-# Cardápio Digital - Sabor do Sertão
-
-Descrição Curta:
-
-Um ou dois parágrafos explicando o que é o projeto.
+# Cardápio Digital - Sabor do Sertão 
 
 Este é um projeto de portfólio que simula um cardápio digital interativo para um restaurante fictício de culinária piauiense. O objetivo foi criar uma experiência de usuário fluida e visualmente atraente, focada em dispositivos móveis, para substituir os tradicionais e pouco práticos cardápios em PDF.
 
 Tecnologias Utilizadas:
-
-Uma lista das tecnologias que você usou.
 
 - React.js (com Vite)
 
@@ -35,8 +29,6 @@ Liste as principais funcionalidades do projeto.
 - Integração com WhatsApp para simular pedidos
 
 Como Rodar o Projeto Localmente (Opcional, mas muito profissional):
-
-Instruções para que outro desenvolvedor possa baixar e rodar seu projeto.
 
 # Clone o repositório
 git clone https://github.com/endeson12/Sabor-do-Sert-o.git
