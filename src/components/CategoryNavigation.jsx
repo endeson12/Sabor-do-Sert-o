@@ -1,12 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import { useEffect } from 'react';
+
+const categories = [
+  { id: 'entradas', name: 'Entradas' },
+  { id: 'principais', name: 'Principais' },
+  { id: 'bebidas', name: 'Bebidas' },
+  { id: 'doces', name: 'Doces' }
+];
 
 const CategoryNavigation = ({ activeCategory, onCategoryChange }) => {
-  const categories = [
-    { id: 'entradas', name: 'Entradas' },
-    { id: 'principais', name: 'Principais' },
-    { id: 'bebidas', name: 'Bebidas' },
-    { id: 'doces', name: 'Doces' }
-  ];
 
   const scrollToSection = (categoryId) => {
     const element = document.getElementById(categoryId);
